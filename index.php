@@ -34,7 +34,7 @@ Author URI: http://www.10kproject.org
 function add_10k_insta_plugin () {
 	$jsURL = plugins_url('jq.insta.js' , __FILE__);
 
-	echo "<script type='text/javascript' src='$jsURL' class='10k'></script>";
+	echo "<script type='text/javascript' src='$jsURL' class='10k'></script>\n";
 }
 
 // hook the plugin js into the head
@@ -44,7 +44,7 @@ add_action( 'wp_head', 'add_10k_insta_plugin');
 function add_10k_insta_plugin_css () {
 	$jsURL = plugins_url('jq.insta.css' , __FILE__);
 
-	echo "<link rel='stylesheet' href='$jsURL' class='10k'>";
+	echo "<link rel='stylesheet' href='$jsURL' class='10k'>\n";
 }
 
 // hook the plugin into the head
