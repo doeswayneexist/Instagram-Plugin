@@ -30,19 +30,19 @@ Author URI: http://www.10kproject.org
  * **********************************************************************
  */
 
-// link the plugin in the head of the page
+// link the plugin js in the head of the page
 function add_10k_insta_plugin () {
-	$jsURL = plugins_url() . '/10k-instagram-feed/jq.insta.js';
+	$jsURL = plugins_url('jq.insta.js' , __FILE__);
 
 	echo "<script type='text/javascript' src='$jsURL' class='10k'></script>";
 }
 
-// hook the plugin into the head
+// hook the plugin js into the head
 add_action( 'wp_head', 'add_10k_insta_plugin');
 
 // link the plugin css in the head of the page
 function add_10k_insta_plugin_css () {
-	$jsURL = plugins_url() . '/10k-instagram-feed/jq.insta.css';
+	$jsURL = plugins_url('jq.insta.css' , __FILE__);
 
 	echo "<link rel='stylesheet' href='$jsURL' class='10k'>";
 }
